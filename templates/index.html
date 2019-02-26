@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars: the red planet</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+                <h1>Mission to Mars</h1>
+                <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Update Mars Data</a></p>
+        </div>
+
+ 
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{{ mars.title }}</h1>
+                <p>{{ mars.paragraph }}</p>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Featured Mars Image</h1>
+                <p><img src= {{ mars.mars_pic }} width="500" height="500"></p>
+            </div>
+            <div class="col-md-4">
+                <h1>Weather on Mars</h1>
+                <p>{{ mars.mars_weather }}</p>
+                <br>
+                <br>
+                <h1>Mars Facts</h1>
+                {{mars.mars_facts | safe}}
+
+            </div>
+        </div>
+
+ 
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Mars Hemispheres</h1>
+            </div>
+        </div>
+            <div class="col-md-6">
+                <p><img src= {{ mars.Cerberus_Hemisphere }} width="350" height="350"></p>
+                <h1>Cerberus Hemisphere</h1>
+
+            <div class="col-md-6">
+                    <p><img src= {{ mars.Valles_Marineris_Hemisphere }} width="350" height="350"></p>
+                    <h1>Valles Marineris Hemisphere</h1>
+
+            </div>     
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <p><img src= {{ mars.Shiaparelli_Hemisphere }} width="350" height="350"></p>
+                <h1>Schiaparelli Hemisphere</h1>
+            </div>
+            <div class="col-md-6">
+                <p><img src= {{ mars.Syrtis_Major_Hemisphere }} width="350" height="350"></p>
+                <h1>Syrtis Major Hemisphere</h1>
+            </div>
+        </div>
+    </div>
+      
+</body>
+
+</html>
