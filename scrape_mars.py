@@ -4,7 +4,7 @@ import pandas as pd
 from splinter import Browser
 from bs4 import BeautifulSoup as bs
 
-
+#imported all mars scraping from pandas to python
 def mars_hemi(hemisphere, browser):
     
     url_hemisphere="https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
